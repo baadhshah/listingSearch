@@ -11,11 +11,9 @@ import styles from './component/css/style';
 const App = () => {
   const [state, dispatch] = GetReducer();
   useEffect(() => {
-    console.log('state.searchText', state.searchText);
     fetchData(dispatch, state);
   },[]);
 
-  console.log('=====state======', state);
   return (
     <SafeAreaView>
       <View style={styles.container}>
